@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  /*font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "Open Sans", sans-serif;*/
+  /* font-family: "Microsoft YaHei", "Open Sans", sans-serif; */
 }
 
 ::-webkit-scrollbar {
@@ -191,24 +191,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border-radius: 50%;
   border: .0625rem solid #fd9500;
   padding: .3rem;
-}
-
-.player.playing .disc img {
-  animation: rotate 60s linear 0s infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  transition: transform .5s linear;
 }
 
 .player .disc .duration {
   font-size: 1.5rem;
-  color: rgba(253, 149, 0, .6);
+  color: rgba(253, 149, 0, .8);
   margin-top: -1.5em;
   z-index: 1;
 }
@@ -258,5 +246,18 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .player .controls button.active {
+  color: #fd9500;
+}
+
+
+.logo{
+  padding: 38px;
+  margin: 50px;
+  border: 2px solid #fd9500;
+  width: 100px;
+  line-height: 100px;
+  border-radius: 15px;
+  background: #2c2c2c;
+  font-size: 94px;
   color: #fd9500;
 }

@@ -26,7 +26,7 @@
           templateUrl: 'player',
           controllerAs: 'vm'
         })
-        .otherwise({ redirectTo: '/item/李克勤 - 天梯.mp3' })
+        .otherwise({ redirectTo: '/home' })
     }])
     .controller('AppController', ['$location', 'options', function ($location, options) {
       const vm = this
@@ -60,14 +60,20 @@
       // 播放音乐
       window.audio && window.audio.pause()
       const audio = window.audio = new Audio()
+      audio.autoplay = true
+      audio.loop = true
       audio.src = `${options.server_root}musics/${vm.data.file}`
+      audio.load()
       audio.addEventListener('durationchange', () => {
         vm.data.duration = audio.duration
         $scope.$apply()
       })
-      audio.addEventListener('canplay', () => {
-        audio.play()
+      audio.addEventListener('play', () => {
         vm.data.playing = true
+        // $scope.$apply()
+      })
+      audio.addEventListener('pause', () => {
+        vm.data.playing = false
         $scope.$apply()
       })
       audio.addEventListener('timeupdate', () => {
@@ -86,7 +92,11 @@
 
       vm.actions.play = () => {
         vm.data.playing ? audio.pause() : audio.play();
-        vm.data.playing = !vm.data.playing
+        // vm.data.playing = !vm.data.playing
+      }
+
+      vm.actions.progress = (e) => {
+        audio.currentTime = vm.data.current
       }
     }])
 
