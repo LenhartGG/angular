@@ -4,22 +4,17 @@ A music player by express &amp; angular
 
 -----
 
-### 课程安排
-
-
-#### 课程介绍
-
-for 新手
-
 Node就是JavaScript语言在服务器端的运行环境（类似于Java的JVM），可以用来构建Web服务应用、操作文件、操作网络。另一方面Node已经掀起了一阵前端工业化革命的风暴。
+
+
+当下的网站开发已经步入Web应用程序的时代， 不再是之前简简单单的内容呈现
 
 AngularJS是Google开源的一套实现MVW思想的前端解决方案，弥补了HTML在构建应用方面的不足。通过扩展HTML的语法的方式让你的应用程序组件结构清晰、简洁。除此之外，AngularJS的双向数据绑定页非常的强大。让客户端Web应用程序的开发和测试工作变得更加容易。
 
 
+#### 内容
 
-#### 课程目标
-
-通过本次课程的学习，我们可以对AngularJS和Node有一个全面的认识，并可以通过AngularJS配合Node实现一个基本的音乐播放器。
+对AngularJS和Node有一个全面的认识，并可以通过AngularJS配合Node实现一个基本的音乐播放器。
 
 
 

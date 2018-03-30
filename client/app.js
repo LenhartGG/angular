@@ -61,7 +61,7 @@
       window.audio && window.audio.pause()
       const audio = window.audio = new Audio()
       audio.autoplay = true
-      audio.loop = true
+      audio.loop = true // 循环播放
       audio.src = `${options.server_root}musics/${vm.data.file}`
       audio.load()
       audio.addEventListener('durationchange', () => {
